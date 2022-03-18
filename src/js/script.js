@@ -519,7 +519,6 @@
 
       for(let prod of thisCart.products) {
         payload.products.push(prod.getData());
-        console.log(payload.products.push(prod.getData()));
       }
 
       const options = {
@@ -608,16 +607,18 @@
     getData(){
       const thisCartProduct = this;
 
-      const orderProducts = {};
+      const orderProduct = {};
 
-      orderProducts.id = thisCartProduct.id;
-      orderProducts.name = thisCartProduct.name;
-      orderProducts.amount = thisCartProduct.amountWidget.value;
-      orderProducts.priceSingle = thisCartProduct.priceSingle;
-      orderProducts.price = thisCartProduct.priceSingle;
-      orderProducts.params = thisCartProduct.params;
+      orderProduct.id = thisCartProduct.id;
+      orderProduct.name = thisCartProduct.name;
+      orderProduct.amount = thisCartProduct.amountWidget.value;
+      orderProduct.priceSingle = thisCartProduct.priceSingle;
+      orderProduct.price = thisCartProduct.priceSingle;
+      orderProduct.params = thisCartProduct.params;
 
-      console.log('orderProducts', orderProducts);
+      console.log('orderProducts', orderProduct);
+
+      return orderProduct;
     }
   }
 
