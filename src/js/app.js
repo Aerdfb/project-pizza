@@ -125,8 +125,19 @@ const app = {
     thisApp.initData();
     // thisApp.initMenu();
     thisApp.initCart();
+    thisApp.initBooking();
   },
+ 
+  initBooking: function(){
+    const thisApp = this;
+    /* find booking cointainer */
+    thisApp.booking = document.querySelector(select.containerOf.booking);
 
+    /* create new class instance for booking */
+
+    new Booking(thisApp.booking);
+
+  }
   
 };
 
