@@ -26,8 +26,8 @@ class Booking{
     thisBooking.dom.wrapper = element; 
     thisBooking.dom.peopleAmount = elementDom.querySelector(select.booking.peopleAmount);
     thisBooking.dom.hoursAmount = elementDom.querySelector(select.booking.hoursAmount);
-    thisBooking.dom.dateinput = elementDom.querySelector(select.widgets.datePicker.wrapper);
-    thisBooking.dom.hoursinput = elementDom.querySelector(select.widgets.hourPicker.wrapper);
+    thisBooking.dom.dateWrapper = elementDom.querySelector(select.widgets.datePicker.wrapper);
+    thisBooking.dom.hoursWrapper = elementDom.querySelector(select.widgets.hourPicker.wrapper);
     element.appendChild(elementDom);
 
     console.log(thisBooking.dom);
@@ -39,8 +39,9 @@ class Booking{
 
     thisBooking.peopleAmount = new AmountWidget(thisBooking.dom.peopleAmount);
     thisBooking.hoursAmount = new AmountWidget(thisBooking.dom.hoursAmount);
-    thisBooking.datePicker = new DatePicker(thisBooking.dom.dateinput);
-    thisBooking.hoursPicker = new HourPicker(thisBooking.dom.hoursinput);
+
+    thisBooking.datePicker = new DatePicker(thisBooking.dom.dateWrapper);
+    thisBooking.hoursPicker = new HourPicker(thisBooking.dom.hoursWrapper);
   }
 
 }
