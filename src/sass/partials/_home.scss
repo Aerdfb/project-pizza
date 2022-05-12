@@ -1,163 +1,159 @@
 .home-wrapper {
-    background: $color-light;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;
-}
-.home-wrapper.container {
-        margin: 42px auto;
-        border-radius: $radius;
+  background: $color-light;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
 }
 
+.home-wrapper.container {
+  margin: 42px auto;
+  border-radius: $radius;
+}
 
 .home-wrapper .box {
-    height: 120px;
-    flex: 45%;
-    border-radius: $radius;
-    margin-bottom: 10px;
+  height: 120px;
+  flex: 45%;
+  border-radius: $radius;
+  margin-bottom: 10px;
 
-    a{
-        text-decoration: none;
-    }
+  a{
+    text-decoration: none;
+  }
 
-    h2{
-        text-align: center;
-        font-size: 26px;
-        color: $color-light;
-        padding-top: 20px;
-        transition: $transition;        
-    }
-    p {
-        text-align: center;
-        color: $color-light;
-        display: none;
-        transition: $transition;
-    }
-   
+  h2{
+    text-align: center;
+    font-size: 26px;
+    color: $color-light;
+    padding-top: 20px;
+    transition: $transition;        
+  }
+
+  p {
+    text-align: center;
+    color: $color-light;
+    display: none;
+    transition: $transition;
+  }   
 }
-.box:hover {
-    h2 {
-        padding-top: 0px;
-    }
-    p {
-        display: block;
-    }   
 
+.box:hover {
+  h2 {
+    padding-top: 0px;
+  }
+  
+  p {
+    display: block;
+  }   
 }
 
 .box-order {
-    background-image: url('../../images/home/pizza-1.jpg');
-    background-position: center;   
-    margin-right: 5px;   
-
-    }
-
+  background-image: url('../../images/home/pizza-1.jpg');
+  background-position: center;
+  margin-right: 5px;   
+}
+  
 .box-booking {
-    background-image: url('../../images/home/pizza-2.jpg');
-    background-position: center;
-    margin-left: 5px;
-
-    }
-.opening-hours {
-    background-color: $color-main;
+  background-image: url('../../images/home/pizza-2.jpg');
+  background-position: center;
+  margin-left: 5px;
 }
 
+.opening-hours {
+  background-color: $color-main;
+}
 
 .main-carousel {
-    flex: 100%;
-    margin: 60px 0;
+  flex: 100%;
+  margin: 60px 0;
 }
 
 .carousel-cell {
-    width: 100%;
-    height: 200px;
-    margin-right: 10px;
+  width: 100%;
+  height: 200px;
+  margin-right: 10px;
 
-    img {
-        width: 190px;
-        height: 190px;
-        object-fit: cover;
-        float: left;
-        margin-right: 25px;
-        border-radius: $radius;
-    }
+  img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    float: left;
+    margin-right: 25px;
+    border-radius: $radius;
+  }
 }
 
-
-
 .gallery {
-    display: flex;
-    flex-flow: row wrap;
-    margin-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 40px;
 }
 
 .gallery-item {
-    flex: 1 30%;
-    position: relative;
-    // padding: 0 8px;
-    margin: 8px 8px;
-    width: 200px;
-    height: 200px;
-    border-radius: $radius;
-    justify-content: center;
+  flex: 1 30%;
+  position: relative;
+  // padding: 0 8px;
+  margin: 8px 8px;
+  width: 200px;
+  height: 200px;
+  border-radius: $radius;
+  justify-content: center;
 
 }
 
-
 .gallery-image::after{
-    content: '';
-    background-color: $color-dark;
-    opacity: 0.8;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0%;
-    top: 0;
-    border-radius: $radius;
-    padding: 0 8px;
+  content: '';
+  background-color: $color-dark;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0;
+  border-radius: $radius;
+  padding: 0 8px;
  
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .gallery-item:hover{
-    .gallery-image::after{
-      visibility: visible;
-      transition: $transition;
+  .gallery-image::after{
+    visibility: visible;
+    transition: $transition;
 
-    }
+  }
 }
 
 .gallery-image img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: $radius;
-
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: $radius;
 
 }
 
 .gallery-icons {
-    position: absolute;
-    font-size: 22px;
-    top: 30%;
-    left: 35%;
+  position: absolute;
+  font-size: 22px;
+  top: 30%;
+  left: 35%;
 
-    ul{
-        padding: 0px;
-    }
+  ul{
+    padding: 0px;
+  }
 
-    li{
-        display: inline-block;
-        color: white;
-        margin-right: 12px;
-    }
+  li{
+    display: inline-block;
+    color: white;
+    margin-right: 12px;
+  }
 }
-.gallery-icons li:hover{
-    color: $color-danger;
-    transition: $transition;
-  }
 
-  .media {
-      margin: 12px 0 40px 8px;
-      color: $color-main;
-  }
+.gallery-icons li:hover{
+  color: $color-danger;
+  transition: $transition;
+}
+
+.media {
+  margin: 12px 0 40px 8px;
+  color: $color-main;
+}
