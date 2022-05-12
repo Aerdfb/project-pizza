@@ -183,7 +183,7 @@ class Booking{
 
     element.appendChild(elementDom);
 
-    console.log(thisBooking.dom);
+    // console.log(thisBooking.dom);
 
   }  
 
@@ -205,19 +205,19 @@ class Booking{
     thisBooking.dom.tablesPlan.addEventListener('click', function(event){
       event.preventDefault;
       thisBooking.initTables(event);
-      console.log(thisBooking.selectedTable);
+      // console.log(thisBooking.selectedTable);
     });
 
     thisBooking.dom.form.addEventListener('submit', function(event){
       event.preventDefault();
       thisBooking.sendBooking();
-      console.log('wysłany order');
+      // console.log('wysłany order');
     });
   }
 
   initTables(event){
     const thisBooking = this;
-    console.log(event);
+    // console.log(event);
 
     // console.log(thisBooking);
 
@@ -231,10 +231,10 @@ class Booking{
 
       thisBooking.selectedTable = clickedElement;
       event.target.classList.add('selected');
-      console.log(thisBooking.selectedTable);
+      // console.log(thisBooking.selectedTable);
 
     } else if(event.target.classList.contains('selected')) {
-      console.log(event.target);
+      // console.log(event.target);
     } else if(event.target.classList.contains('booked')){
       alert('to miejsvce jest już zajęte!');
     } 
@@ -264,7 +264,7 @@ class Booking{
     payload.phone = thisBooking.dom.phone.value;
     payload.adress = thisBooking.dom.adress.value;
     
-    console.log(thisBooking.dom.starters);
+    // console.log(thisBooking.dom.starters);
     for (let starter of thisBooking.dom.starters){
       if (starter.checked) {
         payload.starters.push(starter.value);
@@ -273,7 +273,7 @@ class Booking{
 
     thisBooking.makeBooked(payload.date, payload.hour, payload.duration, payload.table);
 
-    console.log(thisBooking.booked);
+    // console.log(thisBooking.booked);
 
     const options = {
       method: 'POST',
