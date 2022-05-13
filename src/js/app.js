@@ -27,7 +27,7 @@ const app = {
       link.addEventListener('click', function(event){
         const clickedElement = this;
         event.preventDefault();
-        console.log(thisApp.navlinks);
+        // console.log(thisApp.navlinks);
 
         /* get page id from href attribute*/
 
@@ -42,7 +42,6 @@ const app = {
         window.location.hash = '#/' + id;
       });
     }
-
 
   },
 

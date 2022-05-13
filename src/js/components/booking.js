@@ -13,8 +13,9 @@ class Booking{
     thisBooking.render(element);
     thisBooking.initWidgets();
     thisBooking.getData();
-    thisBooking.initTables();
     thisBooking.selectedTable = '';
+    // thisBooking.initTables();
+    
   }
 
   getData(){
@@ -217,10 +218,6 @@ class Booking{
 
   initTables(event){
     const thisBooking = this;
-    // console.log(event);
-
-    // console.log(thisBooking);
-
     thisBooking.resetTable();
     const clickedElement = parseInt(event.target.getAttribute('data-table'));
 
@@ -231,7 +228,6 @@ class Booking{
 
       thisBooking.selectedTable = clickedElement;
       event.target.classList.add('selected');
-      // console.log(thisBooking.selectedTable);
 
     } else if(event.target.classList.contains('selected')) {
       // console.log(event.target);
